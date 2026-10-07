@@ -1,0 +1,21 @@
+[package]
+name = "snomed_review_backend"
+version = "1.0.0"
+edition = "2021"
+default-run = "snomed_review_backend"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1.38", features = ["full"] }
+tower-http = { version = "0.5", features = ["cors", "trace", "fs"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+zip = { version = "2.1", default-features = false, features = ["deflate"] }
+csv = "1.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4.5", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3.10"
